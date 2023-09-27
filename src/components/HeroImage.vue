@@ -1,6 +1,6 @@
 
 <template>
-    <span>
+    <span class="imageContainer">
         <img class="imageTag" ref="imageTag" :src="heroImages[index]" alt="placeholder">
     </span>
 </template>
@@ -50,7 +50,15 @@
 </script>
 
 <style lang="scss" scoped>
-
+.imageContainer{
+    display: grid;
+    align-items: center;
+    >img{
+        width: 100%;
+        object-fit: cover;
+        height: 400px;
+    }
+}
 </style>
 
 

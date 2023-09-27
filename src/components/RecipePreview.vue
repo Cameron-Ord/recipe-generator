@@ -9,6 +9,7 @@
 <script>
 import axios from 'axios';
 import Cookies from 'vue-cookies';
+import { API_KEY } from '../../api-key';
     export default {
         components:{
 
@@ -16,6 +17,7 @@ import Cookies from 'vue-cookies';
 
         data() {
             return {
+                apiKey:API_KEY,
                 index : 0,
                 recipeHolder : undefined
             }
@@ -40,7 +42,7 @@ import Cookies from 'vue-cookies';
                 axios({
                     url:`https://api.spoonacular.com/recipes/${recipeID}`,
                     params:{
-                        apiKey: 'ipsum'
+                        apiKey: this.apiKey
                     }
                 }).then((response)=>{
                     this.recipeHolder = [];

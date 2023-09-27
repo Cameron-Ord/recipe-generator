@@ -1,11 +1,13 @@
 <template>
     <main class="pageMain">
         <section class="heroSection">
-            <hero-text></hero-text>
-            <hero-image></hero-image>
+            <article class="heroArticle">
+                <hero-text></hero-text>
+                <hero-image></hero-image>
+            </article>
         </section>
         <section>
-
+            <random-recipe></random-recipe>
         </section>
     </main>
 </template>
@@ -13,6 +15,7 @@
 <script>
 import HeroText from '../components/HeroText.vue';
 import HeroImage from '../components/HeroImage.vue';
+import RandomRecipe from '../components/RandomRecipe.vue';
     export default {
         data() {
             return {
@@ -20,7 +23,7 @@ import HeroImage from '../components/HeroImage.vue';
             }
         },
         components:{
-            HeroImage, HeroText
+            HeroImage, HeroText,RandomRecipe
         }
     }
 </script>
@@ -30,5 +33,9 @@ import HeroImage from '../components/HeroImage.vue';
     display: grid;
     align-items: center;
     min-height: 100vh;
+    >.heroArticle{
+        display: grid;
+        align-items: center;
+    }
 }
 </style>

@@ -1,1 +1,17 @@
 @import './base.css';
+
+
+:root{
+
+}
+
+body{
+    margin: 0px;
+    padding-top: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p,h1,h2,h3,h4,img,a{
+    margin: 0px;
+    padding: 0px;
+}
