@@ -1,28 +1,32 @@
 @import './base.css';
 
-
-:root{
-
+:root {
 }
 
-body{
-    margin: 0px;
-    padding-top: 0px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body {
+  margin: 0px;
+  padding-top: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-p,h1,h2,h3,h4,img,a{
-    margin: 0px;
-    padding: 0px;
+p,
+h1,
+h2,
+h3,
+h4,
+img,
+a {
+  margin: 0px;
+  padding: 0px;
 }
 
-.pageHeader{
-    display: grid;
-    min-height: 100px;
-    align-items: center;
-  }
-  .pageFooter{
-    display: grid;
-    min-height: 100px;
-    align-items: center;
-  }
+.pageHeader {
+  display: grid;
+  min-height: 100px;
+  align-items: center;
+}
+.pageFooter {
+  display: grid;
+  min-height: 100px;
+  align-items: center;
+}

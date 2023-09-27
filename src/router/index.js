@@ -8,9 +8,9 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: PageMain
-    },
+    }
   ]
 })
-      //component: () => import('../views/AboutView.vue')
+//component: () => import('../views/AboutView.vue')
 
 export default router

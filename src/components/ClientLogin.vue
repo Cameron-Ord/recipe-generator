@@ -1,53 +1,25 @@
-
 <template>
-    <div>
-
-    </div>
+  <div></div>
 </template>
 
 <script>
-    export default {
-        components:{
+export default {
+  components: {},
 
-        },
+  data() {
+    return {}
+  },
 
-        data() {
-            return {
-                
-            }
-        },
-
-        methods:{
-
-        },
-        computed:{
-
-        },
-        created(){
-
-        },
-        mounted(){
-
-        },
-        beforeMount(){
-
-        },
-        beforeUpdate(){
-
-        },
-        updated(){
-
-        },
-        beforeUnmount(){
-
-        },
-        unmounted(){
-
-        }
-
-    }
+  methods: {},
+  computed: {},
+  created() {},
+  mounted() {},
+  beforeMount() {},
+  beforeUpdate() {},
+  updated() {},
+  beforeUnmount() {},
+  unmounted() {}
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
