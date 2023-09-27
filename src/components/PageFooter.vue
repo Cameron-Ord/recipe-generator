@@ -1,7 +1,8 @@
 
 <template>
     <div>
-
+        <h3>Cameron Ord - 2023</h3>
+        <h4>Recipe Generator</h4>
     </div>
 </template>
 

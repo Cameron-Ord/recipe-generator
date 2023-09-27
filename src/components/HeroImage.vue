@@ -1,8 +1,8 @@
 
 <template>
-    <div>
-
-    </div>
+    <span>
+        <img class="imageTag" ref="imageTag" :src="heroImages[index]" alt="placeholder">
+    </span>
 </template>
 
 <script>
@@ -13,7 +13,8 @@
 
         data() {
             return {
-                
+                heroImages : ['images/food1.jpg', 'images/food2.jpg', 'images/food3.jpg'],
+                index : 0
             }
         },
 
@@ -24,7 +25,7 @@
 
         },
         created(){
-
+            this.index = Math.floor(Math.random()* this.heroImages.length);
         },
         mounted(){
 
