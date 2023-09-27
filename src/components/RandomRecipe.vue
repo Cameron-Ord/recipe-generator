@@ -1,6 +1,6 @@
 
 <template>
-    <article>
+    <span class="RandomSpan">
         <div class="recipeInfoContainer" v-if="recipeHolder !== undefined">
             <h3 class="RandomRecipeTitle">{{ recipeHolder['recipes'][0]['title'].toString() }}</h3>
             <img class="RandomRecipeImage" :src="recipeHolder['recipes'][0]['image']" alt="">
@@ -8,7 +8,7 @@
         <div class="recipeInputContainer">
             <input ref="randomInput" class="randomInputTag" placeholder="vegetarian...desert.." type="text">
         </div>
-    </article>
+    </span>
 </template>
 
 <script>
@@ -85,7 +85,34 @@ import { API_KEY } from '../../api-key';
 </script>
 
 <style lang="scss" scoped>
+.RandomSpan{
+    display: grid;
+    align-items: center;
+    
 
+    >.recipeInputContainer{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        >.randomInputTag{
+            
+        }
+    }
+    >.recipeInfoContainer{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    >.RandomRecipeImage{
+        width: 75%;
+        object-fit: cover;
+    }
+    >.RandomRecipeTitle{
+        text-align: center;
+    }
+}
+
+}
 </style>
 
 

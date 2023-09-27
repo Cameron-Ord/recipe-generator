@@ -2,11 +2,16 @@
 <template>
     <div class="headerWrapper">
         <nav class="navContainer">
-            <h2 class="headerLogo">Home</h2>
-            <h2 class="headerSubtext">Ipsum</h2>
+            <div class="logowrapper">
+                <h2 class="headerLogo">Home</h2>
+            </div>
+            <div class="optionswrapper">
+                <p class="headerSubtext">Signup</p>
+                <p class="headerSubtext">Login</p>
+            </div>
         </nav>
         <span class="searchContainer">
-            <input ref="textInput" placeholder="etc.." type="text" @keyup.enter="searchRecipes">
+            <input ref="textInput" placeholder="Italian.. Asian.. etc..." type="text" @keyup.enter="searchRecipes">
         </span>
     </div>
 </template>
@@ -27,7 +32,8 @@ import { API_KEY } from '../../api-key';
 
         methods:{
             searchRecipes(){
-                const queryInput = this.$refs.textInput.textContent;
+                const queryInput = this.$refs.textInput.value;
+                console.log(queryInput)
                 axios({
                     url: `https://api.spoonacular.com/recipes/complexSearch?query=${queryInput}`,
                     params:{
@@ -35,8 +41,9 @@ import { API_KEY } from '../../api-key';
                     }
                 }).then((response)=>{
                     response;
+                    this.$emit('query-response', response['data'])
                 }).catch((error=>{
-                error
+                    error
                 }));
         }
         },
@@ -71,7 +78,7 @@ import { API_KEY } from '../../api-key';
 <style lang="scss" scoped>
 .headerWrapper{
     display: grid;
-    
+
     grid-auto-flow: row;
     row-gap: 25px;
     >.searchContainer{
@@ -85,12 +92,26 @@ import { API_KEY } from '../../api-key';
         display: grid;
         justify-items: center;
         grid-template-columns: 1fr 1fr;
-    
-        >.headerSubtext{
-            text-align: center;
+        >.logowrapper{
+            display: grid;
+            align-items: center;
+            >.headerLogo{
+                text-align: center;
+            }
         }
-        >.headerLogo{
-            text-align: center;
+
+        >.optionswrapper{
+            align-items: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            >.headerSubtext{
+                padding-bottom: 2.5px;
+                padding-top: 2.5px;
+                padding-left: 5px;
+                padding-right: 5px;
+                text-align: center;
+            }
         }
     }
 }

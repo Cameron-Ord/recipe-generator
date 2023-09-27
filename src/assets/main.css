@@ -15,3 +15,14 @@ p,h1,h2,h3,h4,img,a{
     margin: 0px;
     padding: 0px;
 }
+
+.pageHeader{
+    display: grid;
+    min-height: 100px;
+    align-items: center;
+  }
+  .pageFooter{
+    display: grid;
+    min-height: 100px;
+    align-items: center;
+  }
