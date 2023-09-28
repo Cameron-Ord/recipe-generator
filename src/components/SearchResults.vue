@@ -56,7 +56,7 @@ export default {
             this.selectedRecipe.push(data['results'][i])
         }
 
-        console.log(this.selectedRecipe.length)
+        console.log(this.selectedRecipe)
     }
   },
   computed: {},
